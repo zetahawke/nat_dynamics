@@ -1,36 +1,20 @@
 li class="#{'active' if params[:controller].include?('customers')}"
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons chevron_right
-    | Clientes
+    | Inicio
 li class="#{'active' if params[:controller].include?('salesmen')}"
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons chevron_right
-    | Vendedores
+    | Favoritos
 li class="#{'active' if params[:controller].include?('routes')}"
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons chevron_right
-    | Rutas
+    | Recientes
 li class="#{'active' if params[:controller].include?('visits')}"
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons chevron_right
-    | Visitas
+    | Noticias
 li class="#{'active' if params[:controller].include?('satisfaction_questionaries')}"
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons chevron_right
-    | Encuestas
-li class="#{'active' if params[:controller].include?('questions')}"
-  = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Preguntas
-li class="#{'active' if params[:controller].include?('acceptance_criteria')}"
-  = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Criterios
-li class="#{'active' if params[:controller] == 'admin/goals'}"
-  = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | M. evaluación
-li class="#{'active' if params[:controller].include?('money_goals')}"
-  = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | M. de ventas
+    | Módulos
