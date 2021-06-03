@@ -4,7 +4,7 @@ Nat's Dynamics website project.
 
 ## Description
 
-Nat's Dynamics are here with her own project made with RoR latest version's framework to give her clients the best way to explore her merchancy.
+Nat's Dynamics are here with her own project made with RoR latest version's framework to give her clients the best way to explore her idea.
 
 ## Installation
 
