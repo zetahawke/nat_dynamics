@@ -1,16 +1,17 @@
-# EVARES360
+# Nat's Dynamics
 
-EVARES360 website project.
+Nat's Dynamics website project.
 
 ## Description
 
-EVARES360 are here with her own project made with RoR latest version's framework to give her clients the best way to explore her merchancy.
+Nat's Dynamics are here with her own project made with RoR latest version's framework to give her clients the best way to explore her merchancy.
 
 ## Installation
 
 Make sure to have all the necessary stuff to start building this up.
 
 ### Pre Requisites
+
 - Ruby 2.7.1
 - Rails 6.0.3.1
 - Bundler >= 2.14
@@ -29,6 +30,7 @@ rails s (-p port) (-b ip)
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
@@ -36,5 +38,6 @@ Please make sure to update tests as appropriate.
 All Pull Request must be made against 'stable' branch
 
 ## License
+
 Owned by
-[EVARES360](https://www.github.com/zetahawke/)
+[Nat's Dynamics](https://www.github.com/zetahawke/)
