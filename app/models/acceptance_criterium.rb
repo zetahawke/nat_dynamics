@@ -1,2 +1,0 @@
-class AcceptanceCriterium < ApplicationRecord
-end

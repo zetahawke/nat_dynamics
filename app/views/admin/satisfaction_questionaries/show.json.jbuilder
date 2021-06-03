@@ -1,1 +1,0 @@
-json.partial! "satisfaction_questionaries/satisfaction_questionary", satisfaction_questionary: @satisfaction_questionary
