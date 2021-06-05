@@ -1,6 +1,7 @@
 nav
   .nav-wrapper
-    a.brand-logo href="#{root_path}" data-turbolinks='false'  Nat's Dynamics
+    a.brand-logo href="#{root_path}" data-turbolinks='false'
+      i.material-icons.ml-10 style="font-size: 40px;" apps
     a.sidenav-trigger data-target="sidenav-right" href="/" 
       i.material-icons menu
     ul.right.hide-on-med-and-down
@@ -17,4 +18,3 @@ ul#sidenav-right.sidenav.sidenav-right
   li
     = link_to new_user_session_path, class: 'login-mobile', data: { turbolinks: 'false' } do
       i.material-icons fingerprint
-      | Ingresar

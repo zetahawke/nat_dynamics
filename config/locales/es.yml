@@ -1,28 +1,568 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
 es:
-  salesman:
-    filters:
-      type:
-        daily: Diario
-        monthly: Mensual
-        yearly: Anual
-  visit:
-    statuses:
-      created: Creada
-      accomplished: Completada
-      not_accomplished: No completada
-    true: Sí
-    false: No
-    nil: No
+  hello: "Hola mundo"
+  created_at: Creado el
+  updated_at: Última actualización
+  add: Añadir
+  edit: Editar
+  show: Ver
+  destroy: Destruir
+  delete: Eliminar
+  selected: Seleccionados
+  erase: borrar
+  no_data: Sin información
+  back: Atrás
+  save: Guardar
+  filters: Filtros
+  options: Opciones
+  search: Buscar
+  clean: Limpiar
+  new: Nuevo
+  send: Enviar
+  true: Si
+  false: 'No'
+  found: Encontradas
+  upload: Subir
+  approve: Aprobar
+  reject: Rechazar
+  assign: Asignar
+  massive_assign: Asignación masiva
+  active_record:
+    form_labels:
+      site_modules:
+        nav:
+          mutable_text: 'Texto mutable'
+          links_to_section:
+            section_name: 'Nombre de la sección'
+            translation: 'Traducción'
+            external_link: 'Link externo?'
+            external_url: 'Url para link externo'
+          social_array:
+            icon_name: 'Nombre red social'
+            url: 'Url de la red social'
+        preloader:
+          resource_url: 'Url del recurso'
+        header:
+          big_text: 'Texto grande'
+          big_logo_url: 'Url del logo grande'
+          sub_text: 'Texto inferior descriptivo'
+          mid_button:
+            text: 'Texto del botón'
+            url: 'Url del botón'
+          images_carousel:
+            active: 'Carrusel Activo?'
+            version: 'Versión del Carrusel'
+            images_url: 'Url de la imagen'
+        about:
+          title: 'Título'
+          sub_text: 'Texto descriptivo'
+          sub_sections:
+            icon_name: 'Código del Ícono'
+            title: 'Título sub sección'
+            sub_text: 'Breve descripción'
+        features:
+          title: 'Título'
+          feature_array:
+            icon_name: 'Código del Ícono'
+            title: 'Título sub sección'
+            sub_text: 'Breve descripción'
+            image_url: 'URL imagen'
+        showcase:
+          title: 'Título'
+          sub_text: 'Texto descriptivo'
+          showcase_array:
+            text_side: 'Lado del texto'
+            title: 'Título sub sección'
+            sub_text: 'Texto descriptivo'
+            images_url: 'Imagen de muestra'
+            case_description_array:
+              icon: 'Código del Ícono'
+              title: 'Título para la característica'
+              sub_text: 'Breve descripción'
+        subscribe:
+          translation: 'Traducción del botón'
+        screenshot:
+          title: 'Título para la sección'
+          sub_text: 'Texto descriptivo'
+          carousel_images: 'Imagen del carrusel'
+        testimonials:
+          title: 'Título para la sección'
+          testimonials_array:
+            name: 'Nombre de la persona'
+            sub_text: 'Breve reseña'
+            image_url: 'Url imagen del representante'
+            rating: 'Puntaje'
+        team:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          team_array:
+            name: 'Nombre de la persona'
+            charge: 'Cargo'
+            image_url: 'Url imagen'
+            social_array:
+              icon_name: 'Nombre red social'
+              url: 'Url de la red social'
+        download:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          image_url: 'Imagen de muestra de la App'
+          links:
+            iphone: 'Link para iphone'
+            android: 'Link para android'
+            windows: 'Link para windows'
+        news:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+        video:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          video_url: 'Url del video'
+        prices:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+        statistics:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          statistics_array:
+            icon: 'Código del Ícono'
+            title: 'Título de la estadística'
+            sufix_text: 'Sufijo del contador'
+            counter_number: 'Contador'
+        faq:
+          title: 'Título para la sección'
+          sub_text: 'Texto de descripción'
+          faq_array:
+            title: 'Pregunta'
+            sub_text: 'Respuesta'
+        footer:
+          contact_form:
+            title: 'Título del formulario'
+            button_text: 'Texto del botón'
+            address: 'Dirección'
+            phone: 'Número de teléfono'
+            email: 'Correo'
+            fields_placeholders:
+              name: 'Pre-texto para el campo Nombre'
+              email: 'Pre-texto para el campo Email'
+              message: 'Pre-texto para el campo Mensaje'
+            social_media:
+              name: 'Nombre de la red social'
+              icon: 'Icono de la red social'
+              background_color: 'Color de fondo'
+              url: 'Url hacia la red social'
+          footer:
+            tags_array: 'Tag'
+    hints_tooltips:
+      site_modules:
+        nav:
+          mutable_text: 'Este texto va al lado superior izquierdo de la pantalla, al costado derecho del logo, tiene un efecto de interpolación de colores al pasar el cursor por encima.'
+          links_to_section:
+            section_name: 'Este texto hace referencia a la sección a la cual este link ira redirigido dentro dentro de la página actual'
+            translation: 'Este texto será lo que aparecerá visualmente.'
+            external_link: 'Si deseas que este link abra otra ventana con un link especificado'
+            external_url: 'Rellena este campo con el link de la ventana que deseas abrir cuando tienes external_link habilitado'
+          social_array:
+            icon_name: 'Nombre de la red social. Esto se usará para asignar íconos por lo que su correcta escritura tiene directa relación con lo mismo.'
+            url: 'Url de la red social'
+        preloader:
+          resource_url: 'Agrega o especifica algún recurso, gif o imagen con la que quieras reemplazar el loading base de esta plantilla'
+        header:
+          big_text: 'Texto mutable estilo título que generalmente se ocupa para nombrar a la empresa'
+          big_logo_url: 'Link o url del logo representativo de la empresa'
+          sub_text: 'Sub texto que describe tu empresa, se usa como fraseo de la misma'
+          mid_button:
+            text: 'Texto con el que se rellenará el botón'
+            url: 'Url a la cual redireccionará el botón'
+          images_carousel:
+            active: 'Marca si el carrusel debe o no aparecer'
+            version: 'Selecciona la forma de las imágenes que debe mostrar el carrousel'
+            images_url: 'Url de la imagen del carrusel'
+        about:
+          title: 'Título para la sección'
+          sub_text: 'Texto descriptivo de la sección'
+          sub_sections:
+            icon_name: 'Código del Ícono (seleccionado de la página o url mostrada más arriba)'
+            title: 'Título relacionado a la sub sección'
+            sub_text: 'Breve descripción de la sub sección apuntada'
+        features:
+          title: 'Título para la sección'
+          feature_array:
+            icon_name: 'Código del Ícono (seleccionado de la página o url mostrada más arriba)'
+            title: 'Título relacionado a la sub sección'
+            sub_text: 'Breve descripción de la sub sección apuntada'
+            image_url: 'Url de la imagen a mostrar en esta sub sección'
+        showcase:
+          title: 'Título para la sección. texto grande centrado de la plantilla'
+          sub_text: 'Añade una reseña breve de lo que se trata esta sección destinado en un comienzo para listar principales características a destacar'
+          showcase_array:
+            text_side: 'Elige el lado al cual se mantendrá el texto. Las imágenes iran al costado opuesto de este'
+            title: 'Añade un breve título alucivo a la sub sección a listar'
+            sub_text: 'Acompaña dicho título con una breve descripción'
+            images_url: 'Imagenes de muestra para dar a entener la idea presentada por el showcase'
+            case_description_array:
+              icon: 'Código del Ícono. sacado de las fuentes de font-awesome, escoge y remplaza.'
+              title: 'Título para la característica a describir'
+              sub_text: 'Describe brevemente la característica'
+        subscribe:
+          translation: 'Traducción del botón de subscribe'
+        screenshot:
+          title: 'Título para la sección'
+          sub_text: 'Texto descriptivo de la sección'
+          carousel_images: 'Imagen del carrusel, esta quedará en la lista en el orden de este formulario'
+        testimonials:
+          title: 'Título para la sección'
+          testimonials_array:
+            name: 'Nombre de la persona que dió su calificación'
+            sub_text: 'Breve reseña que entregó la persona'
+            image_url: 'Url del representante a cargo de la emisión de dicha opinión o testimonio'
+            rating: 'Puntaje con el cual acompañó su testimonio'
+        team:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          team_array:
+            name: 'Nombre de la persona'
+            charge: 'Cargo que ocupa la persona'
+            image_url: 'Url imagen de la persona, debe ser una imagen cuadrada ojalá no superior a 370px por lado'
+            social_array:
+              icon_name: 'Nombre de la red social. Esto se usará para asignar íconos por lo que su correcta escritura tiene directa relación con lo mismo.'
+              url: 'Url de la red social'
+        download:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          image_url: 'Imagen de muestra de la App'
+          links:
+            iphone: 'Link para iphone'
+            android: 'Link para android'
+            windows: 'Link para windows'
+        news:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+        video:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          video_url: 'Url del video a mostrar de forma externa, prefiera fuentes como YouTube o Vimeo'
+        prices:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+        statistics:
+          title: 'Título para la sección'
+          sub_text: 'Descripción para la sección'
+          statistics_array:
+            icon: 'Código del Ícono, sacado de la lista de iconos de font-awesome en el link de más arriba'
+            title: 'Título que se le da a la estadística a contar'
+            sufix_text: 'Sufijo para el contador, acompañará estaticamente al número mientras este crece'
+            counter_number: 'Contador, si el número es muy grande, considera abreviarlo usando un sufiji como K para miles o M para millones'
+        faq:
+          title: 'Título para la sección. texto grande centrado de la plantilla'
+          sub_text: 'Texto de descripción para la sección'
+          faq_array:
+            title: 'Añade un breve título alucivo a la pregunta'
+            sub_text: 'Acompañalo con la respuesta de dicha pregunta'
+        footer:
+          contact_form:
+            title: 'Título del formulario'
+            button_text: 'Texto del botón, puedes cambiarlo a gusto'
+            address: 'Dirección, puedes omitirla o rellenarla'
+            phone: 'Número de teléfono de tu empresa'
+            email: 'Correo electrónico donde quieres que te contacten'
+            fields_placeholders:
+              name: 'Es un texto prefijado para cuando no hay valores introducidos aún'
+              email: 'Es un texto prefijado para cuando no hay valores introducidos aún'
+              message: 'Es un texto prefijado para cuando no hay valores introducidos aún'
+            social_media:
+              name: 'Nombre de la red social'
+              icon: 'Icono de la red social, sacado de las fuentes de font-awesome, solo rellena con el nombre de la red social en minúsculas'
+              background_color: 'Color de fondo para resaltar el icono'
+              url: 'Url hacia la red social'
+          footer:
+            tags_array: 'Son solo tags que quieres que aparezcan en tu sitio web. No tienen mayores efectos CEO'
+  pages:
+    site_modules:
+      edit:
+        components_configuration_explain: 'En esta sección podras especificar el contenido de la sección que estás editando. Cada sección de la página tiene sus componentes para personalizar.'
+        modules:
+          nav: 'En el caso de la sección NAV o barra superior, contiene links, imagenes y textos, de los cuales los links y sus textos así como las url en caso de ser externas, se pueden personalizar. A partir del texto mutable, cada carta de edición corresponde a un link en la barra superior. Considera los vacíos como omisibles.'
+          preloader: 'Para el preloader, puedes especificar una imagen para reemplazar la que viene por defecto en este template y con ello personalizar el efecto de carga de la página.'
+          header: 'Para el header, puedes especificar o personalizar cosas como los textos, imagenes del carousel e incluso el texto del botón y descripción del a empresa.'
+          about: 'En la sección de about, el fin es darse a conocer y para ello se presentan algunas sub secciones para mostrar o listar contenido pertinente al rubro foco de la empresa. '
+          features: 'En la sección de features, el fin es dar a conocer las principales funciones de tu empresa y/o software y para ello se presentan algunas sub secciones para mostrar o listar contenido pertinente a cada función a resaltar. '
+          showcase: 'Aquí podrás exponer las principales características que mejor describen a tu empresa y/o tus funciones principales. Debe tener mucha coheción con la sección de features. Acompaña cada una de las características con capturas o fotos que más acompañen dicha descripción. '
+          subscribe: ''
+          screenshot: 'Aquí podrás listar las mejores imágenes que estimes pertinente, con un mínimo y máximo de 5 para que el efecto carousel funcione a la perfección.'
+          testimonials: 'Captura y agrega las impresiones de tus clientes. Toda calificación de tus servicios o productos que te gustaría compartir públicamente'
+          team: 'Actualmente, las empresas se esmeran cada día más por resaltar a sus colaboradores emblemáticos, los que mejores representan sus valores, o los contactos impresindibles dentro de los cuales listar un par de cargos ayuda mucho al propósito de aumentar sanamente el ego del equipo o, simplemente dar a conocer los contactos dentro de la empresa.'
+          download: '(En caso de que poseas una...) Da a conocer tu sección de descargas para dispositivos móviles listando cada url de descarga para cada tipo de dispositivo que cubras.'
+          news: 'La sección de noticias. Un importante trozo de información que puedes brindar rápidamente a tus visitantes.'
+          video: 'La sección de video te servirá para redirigir a tus visitantes a un video de muestra de tus productos y/o servicios.'
+          prices: 'La sección de precios por ahora es un tanto reservada para nosotros. Peeero, en un futuro podrías querer mostrar una base de precios para tu software, productos o servicios.'
+          statistics: 'La sección de estadísticas esta pensada para mostrar números de gran interes visual para los visitantes, como usuarios activos o número de descargas de una aplicación. Incluso un contador total de puntaje en reseñas. '
+          font_awesome: 'Nota: Para los códigos de Iconos, sirvase ver https://fontawesome.com/v4.7.0/icons/ para referencias sobre la lista de iconos disponibles y como usarlas.'
+          faq: 'La sección de FAQ será donde darás a conocer las preguntas y respuestas más comunes de tu sitio.'
+          footer: 'La sección de footer se conforma de dos sub secciones: Formulario de contacto y footer tags. El primero sirve para que los clientes te contacten y el segundo sirve para hacer menciones estilos Tags sobre tu producto, software o servicio. Este último no tiene efectos CEO de gran implicancia, son solo menciones visuales.'
   activerecord:
     errors:
-      models:
-        customer:
-          attributes:
-            email:
-              invalid: 'El Email no tiene un formato correcto.'
-              taken: 'El correo ya está registrado.'
-            phone:
-              invalid: 'El formato del teléfono no es correcto.'
-            dni:
-              invalid: 'El formato del rut no es correcto.'
-              taken: 'El Rut ya está registrado.'
+      messages:
+        record_invalid: 'La validación falló: %{errors}'
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%-d/%-m/%Y"
+      long: "%-d de %B de %Y"
+      short: "%-d de %b"
+    month_names:
+    - 
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: 1 año
+        other: "%{count} años"
+    prompts:
+      second: Segundo
+      minute: Minuto
+      hour: Hora
+      day: Día
+      month: Mes
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor que o igual a %{count}
+      model_invalid: 'La validación falló: %{errors}'
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      other_than: debe ser distinto de %{count}
+      present: debe estar en blanco
+      required: debe existir
+      taken: ya está en uso
+      too_long:
+        one: es demasiado largo (1 carácter máximo)
+        other: es demasiado largo (%{count} caracteres máximo)
+      too_short:
+        one: es demasiado corto (1 carácter mínimo)
+        other: es demasiado corto (%{count} caracteres mínimo)
+      wrong_length:
+        one: no tiene la longitud correcta (1 carácter exactos)
+        other: no tiene la longitud correcta (%{count} caracteres exactos)
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: mil millones
+          million:
+            one: millón
+            other: millones
+          quadrillion: mil billones
+          thousand: mil
+          trillion:
+            one: billón
+            other: billones
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n %"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%A, %-d de %B de %Y %H:%M:%S %z"
+      long: "%-d de %B de %Y %H:%M"
+      short: "%-d de %b %H:%M"
+    pm: pm
+  model_names:
+    projects: Proyectos
+    constructions: Etapas
+    builders: Constructoras
+    builder_contacts: Contactos de cons
+    products: Productos
+    blueprints: Planos
+    categories: Categorias
+    payments: Pagos
+    charges: Cargos
+    subscriptions: Suscripciones
+    payment_methods: Metodos de pago
+    addresses: Direcciones
+    communes: Comunas
+    regions: Regiones
+    countries: Países
+    people: Personas
+    permissions: Permisos
+    roles: Roles
+    notifications: Notificaciones

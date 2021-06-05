@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  provider_name: MyString
+  rut: MyString
+  folio: MyString
+  amount: 1
+  issue_date: 2021-06-04
+  expire_date: 2021-06-04
+  validation_status: 1
+  user_name: MyString
+
+two:
+  provider_name: MyString
+  rut: MyString
+  folio: MyString
+  amount: 1
+  issue_date: 2021-06-04
+  expire_date: 2021-06-04
+  validation_status: 1
+  user_name: MyString

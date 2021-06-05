@@ -1,0 +1,35 @@
+= form_with(model: @invoice, local: true, url: @form_url) do |f|
+  - if @invoice.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@invoice.errors.count, "error")} prohibited this invoice from being saved:"
+      ul
+        - @invoice.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :provider_name
+    = f.text_field :provider_name
+  .field
+    = f.label :rut
+    = f.text_field :rut
+  .field
+    = f.label :folio
+    = f.text_field :folio
+  .field
+    = f.label :amount
+    = f.number_field :amount
+  .field
+    = f.label :issue_date, 'Issue date'
+    = f.date_field :issue_date
+  .field
+    = f.label :expire_date, 'Expire date'
+    = f.date_field :expire_date
+  .field
+    = f.label :validation_status
+    = f.select :validation_status, options_for_select(Invoice.validation_statuses.map { |status| status }, @invoice.validation_status || 1), {}
+  .field
+    = f.label :user_name
+    = f.text_field :user_name
+
+  .actions
+    = f.submit 'Save', class: 'btn right'

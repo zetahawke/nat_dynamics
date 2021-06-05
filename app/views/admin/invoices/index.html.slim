@@ -1,0 +1,34 @@
+h5 Listing invoices
+
+table
+  thead
+    tr
+      th Provider name
+      th Rut
+      th Folio
+      th Amount
+      th Issue date
+      th Expire date
+      th Validation status
+      th User name
+      th
+
+  tbody
+    - @invoices.each do |invoice|
+      tr
+        td = invoice.provider_name
+        td = invoice.rut
+        td = invoice.folio
+        td = invoice.amount
+        td = invoice.issue_date
+        td = invoice.expire_date
+        td = invoice.validation_status
+        td = invoice.user_name
+        td
+          = link_to 'Show', invoice
+          = link_to 'Edit', edit_invoice_path(invoice)
+          = link_to 'Destroy', invoice, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Invoice', new_admin_invoice_path, class: 'btn right'
