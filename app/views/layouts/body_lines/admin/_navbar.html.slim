@@ -6,7 +6,8 @@ nav
       i.material-icons menu
     ul.right.hide-on-med-and-down
       li
-        = link_to 'Sign out', destroy_user_session_path, method: :delete
+        = link_to destroy_user_session_path, method: :delete do
+          i.material-icons logout
 ul#sidenav-right.sidenav.sidenav-right
   = render 'layouts/body_lines/admin/menu_items'
   li
