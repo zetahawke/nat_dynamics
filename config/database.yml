@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: nat_dynamics_production
-  username: nat_dynamics
+  database: d2aut081bh625v
+  username: ibxgjiayyduivg
+  host: ec2-34-230-167-186.compute-1.amazonaws.com
   password: <%= ENV['nat_dynamics_DATABASE_PASSWORD'] %>
