@@ -26,7 +26,7 @@
     = f.date_field :expire_date
   .field
     = f.label :validation_status
-    = f.select :validation_status, options_for_select(Invoice.validation_statuses.map { |status| status }, @invoice.validation_status || 1), {}
+    = f.select :validation_status, options_for_select(Invoice.validation_statuses.keys.map { |status| [status, status] }, @invoice.validation_status || 1), {}, {}
   .field
     = f.label :user_name
     = f.text_field :user_name

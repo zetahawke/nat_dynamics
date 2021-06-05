@@ -1,27 +1,27 @@
 p
-  strong Provider name:
+  strong Provider name: 
   = @invoice.provider_name
 p
-  strong Rut:
+  strong Rut: 
   = @invoice.rut
 p
-  strong Folio:
+  strong Folio: 
   = @invoice.folio
 p
-  strong Amount:
+  strong Amount: 
   = @invoice.amount
 p
-  strong Issue date:
+  strong Issue date: 
   = @invoice.issue_date
 p
-  strong Expire date:
+  strong Expire date: 
   = @invoice.expire_date
 p
-  strong Validation status:
+  strong Validation status: 
   = @invoice.validation_status
 p
-  strong User name:
+  strong User name: 
   = @invoice.user_name
 
 => link_to 'Edit', edit_admin_invoice_path(@invoice), class: 'btn right'
-=< link_to 'Back', admin_invoices_path, class: 'btn grey lighten-3'
+=< link_to 'Back', admin_invoices_path, class: 'btn grey lighten-3', style: 'color: black;'
