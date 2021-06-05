@@ -1,20 +1,18 @@
 li class="#{'active' if params[:controller].include?('customers')}"
   = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Inicio
+    i.material-icons menu
+li class="#{'active' if params[:controller].include?('customers')}"
+  = link_to '#', data: { turbolinks: 'false' } do
+    i.material-icons home
 li class="#{'active' if params[:controller].include?('salesmen')}"
   = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Favoritos
+    i.material-icons star_outline
 li class="#{'active' if params[:controller].include?('routes')}"
   = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Recientes
+    i.material-icons access_time
 li class="#{'active' if params[:controller].include?('visits')}"
   = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Noticias
+    i.material-icons feed
 li class="#{'active' if params[:controller].include?('satisfaction_questionaries')}"
   = link_to '#', data: { turbolinks: 'false' } do
-    i.material-icons chevron_right
-    | Módulos
+    i.material-icons list
