@@ -16,13 +16,6 @@ html
       = render 'layouts/body_lines/navbar'
 
     div
-      - if notice
-        p.notice.green.white-text.m-10.p-10
-          = notice
-      - if alert
-        p.alert.deep-orange.black-text.m-10.p-10
-          = alert
-
       - unless user_signed_in?
         .container.main-cont
           .card.p-20.allow-overflow
@@ -33,6 +26,12 @@ html
             .card style='margin: 0; max-width: 50px'
               = render 'layouts/body_lines/admin/sidenav'
           .col.s12.m12.l11
+            - if notice
+              p.notice.green.white-text.m-10.p-10
+                = notice
+            - if alert
+              p.alert.deep-orange.black-text.m-10.p-10
+                = alert
             .card.p-20.allow-overflow
               = yield
 
