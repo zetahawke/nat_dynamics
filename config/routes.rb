@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact', as: :contact
   
   namespace :admin do
+    get 'modules_menu', to: 'home#modules_menu'
+    get 'providers_menu', to: 'home#providers_menu'
+
     get '/', to: 'home#index', as: :root
     resources :invoices do
       collection do

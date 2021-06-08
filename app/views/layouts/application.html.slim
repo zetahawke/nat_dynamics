@@ -22,10 +22,10 @@ html
             = yield
       - else
         .row.main-cont
-          .col.l1.hide-on-med-and-down style='margin-left: -5px;'
+          .col.hide-on-med-and-down.w-10 style='margin-left: -5px;'
             .card style='margin: 0; max-width: 50px'
               = render 'layouts/body_lines/admin/sidenav'
-          .col.s12.m12.l11
+          .col.wp-90
             - if notice
               p.notice.green.white-text.m-10.p-10
                 = notice

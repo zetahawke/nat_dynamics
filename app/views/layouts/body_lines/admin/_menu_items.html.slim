@@ -1,18 +1,18 @@
-li class="#{'active' if params[:controller].include?('customers')}"
+li
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons menu
-li class="#{'active' if params[:controller].include?('customers')}"
-  = link_to '#', data: { turbolinks: 'false' } do
+li
+  = link_to root_path, data: { turbolinks: 'false' } do
     i.material-icons home
-li class="#{'active' if params[:controller].include?('salesmen')}"
+li
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons star_outline
-li class="#{'active' if params[:controller].include?('routes')}"
+li
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons access_time
-li class="#{'active' if params[:controller].include?('visits')}"
+li
   = link_to '#', data: { turbolinks: 'false' } do
     i.material-icons feed
-li class="#{'active' if params[:controller].include?('satisfaction_questionaries')}"
-  = link_to '#', data: { turbolinks: 'false' } do
+li class="#{'active' if params[:controller].include?('invoice')}"
+  = link_to admin_modules_menu_path, data: { turbolinks: 'false' } do
     i.material-icons list
