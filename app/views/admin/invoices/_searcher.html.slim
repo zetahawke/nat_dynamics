@@ -1,0 +1,21 @@
+
+br/
+h6
+  | Filtros
+.row
+  .col.s12
+    = form_with(url: @searcher_url, method: :get, local: true) do |f|
+      .row
+        .col.s12.m6.l3
+          = f.label 'query[provider_name]', 'Proveedor'
+          = f.text_field 'query[provider_name]', { value: params[:query] ? params[:query][:provider_name] : '' }
+        .col.s12.m6.l3
+          = f.label 'query[rut]', 'Rut'
+          = f.text_field 'query[rut]', { value: params[:query] ? params[:query][:rut] : '' }
+        .col.s12.m6.l3
+          = f.label 'query[folio]', 'Folio'
+          = f.text_field 'query[folio]', { value: params[:query] ? params[:query][:folio] : '' }
+      .row
+        .col.s12
+          = f.submit 'Buscar', class: 'btn btn-small right'
+          = link_to 'Limpiar', @searcher_url, class: 'btn btn-small grey lighten-3 right mr-10', style: 'color: black;'

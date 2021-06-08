@@ -2,15 +2,16 @@ module Admin
   class InvoicesController < ApplicationController
     before_action :set_invoice, only: [:show, :edit, :update, :destroy]
     before_action :set_form_url, only: [:edit, :new]
+    before_action :set_searcher_url, only: [:index, :white_list]
   
     # GET /invoices
     # GET /invoices.json
     def index
-      @invoices = Invoice.all
+      @invoices = params[:query] ? Invoice.search_by_params(params[:query]) : Invoice.all
     end
 
     def white_list
-      @invoices = Invoice.where(validation_status: :contabilized)
+      @invoices = params[:query] ? Invoice.search_by_params(params[:query]).select { |w| w.validation_status == 'contabilized' } : Invoice.where(validation_status: :contabilized)
       @selected_invoices = if params[:invoice_ids]
         @invoices.where(id: params[:invoice_ids])
       else
@@ -92,6 +93,10 @@ module Admin
 
       def set_form_url
         @form_url = params[:action] == 'new' ? admin_invoices_path : admin_invoice_path(@invoice)
+      end
+      
+      def set_searcher_url
+        @searcher_url = params[:action] == 'index' ? admin_invoices_path : white_list_admin_invoices_path
       end
   end
 end

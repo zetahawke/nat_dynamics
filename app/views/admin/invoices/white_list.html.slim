@@ -1,4 +1,7 @@
 h5 Facturas de proveedor lista blanca
+br/
+= render 'searcher'
+
 
 = form_with(url: download_list_admin_invoices_path, method: :post, local: true) do |form|
   table
