@@ -1,0 +1,43 @@
+h5 Facturas de proveedor lista blanca
+
+= form_with(url: download_list_admin_invoices_path, method: :post, local: true) do |form|
+  table
+    thead
+      tr
+        th
+        th Proveedor
+        th Rut
+        th Folio
+        th Monto
+        th Fecha de emisión
+        th Fecha de expiración
+        th Estado de validación
+        th Usuario
+        th
+
+    tbody
+      - @invoices.each do |invoice|
+        tr
+          td
+            label
+              = form.check_box 'invoice_ids[]', {}, invoice.id, @selected_invoices.include?(invoice)
+              span = invoice.id
+          td = invoice.provider_name
+          td = invoice.rut
+          td = invoice.folio
+          td = number_to_currency(invoice.amount, precision: 0, unit: '$', separator: ',', delimiter: '.', format: '%u %n')
+          td = invoice.issue_date
+          td = invoice.expire_date
+          td = t("invoices.form_labels.statuses.#{invoice.validation_status}")
+          td = invoice.user_name
+          td
+            = link_to 'Ver', admin_invoice_path(invoice), class: 'mr-10'
+            = link_to 'Editar', edit_admin_invoice_path(invoice), class: 'mr-10'
+            = link_to 'Eliminar', admin_invoice_path(invoice), data: { confirm: 'Estas seguro?' }, method: :delete
+
+    = form.submit 'Descargar', class: 'btn-small right'
+
+br
+hr/
+
+= link_to 'Nueva factura', new_admin_invoice_path, class: 'btn right'

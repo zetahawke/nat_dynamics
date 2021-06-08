@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   
   namespace :admin do
     get '/', to: 'home#index', as: :root
-    resources :invoices
+    resources :invoices do
+      collection do
+        get 'white_list'
+        post 'download_list'
+      end
+    end
   end
 end

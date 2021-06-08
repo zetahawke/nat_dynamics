@@ -8,6 +8,22 @@ module Admin
     def index
       @invoices = Invoice.all
     end
+
+    def white_list
+      @invoices = Invoice.where(validation_status: :contabilized)
+      @selected_invoices = if params[:invoice_ids]
+        @invoices.where(id: params[:invoice_ids])
+      else
+        Invoice.none # check none the checkboxes by default
+        # or use @invoices for the opposite
+      end
+    end
+
+    def download_list
+      redirect_back fallback_location: root_path, notice: 'Se descargó la información'
+    rescue StandardError => _e
+      redirect_back fallback_location: root_path, alert: 'No se pudo descargar la información'
+    end
   
     # GET /invoices/1
     # GET /invoices/1.json
