@@ -1,16 +1,16 @@
-h5 Listing invoices
+h5 Facturas recibidas contado
 
 table
   thead
     tr
-      th Provider name
+      th Proveedor
       th Rut
       th Folio
-      th Amount
-      th Issue date
-      th Expire date
-      th Validation status
-      th User name
+      th Monto
+      th Fecha de emisión
+      th Fecha de expiración
+      th Estado de validación
+      th Usuario
       th
 
   tbody
@@ -19,15 +19,15 @@ table
         td = invoice.provider_name
         td = invoice.rut
         td = invoice.folio
-        td = invoice.amount
+        td = number_to_currency(invoice.amount, precision: 0, unit: '$', separator: ',', delimiter: '.', format: '%u %n')
         td = invoice.issue_date
         td = invoice.expire_date
-        td = invoice.validation_status
+        td = t("invoices.form_labels.statuses.#{invoice.validation_status}")
         td = invoice.user_name
         td
-          = link_to 'Show', admin_invoice_path(invoice), class: 'mr-10'
-          = link_to 'Edit', edit_admin_invoice_path(invoice), class: 'mr-10'
-          = link_to 'Destroy', admin_invoice_path(invoice), data: { confirm: 'Are you sure?' }, method: :delete
+          = link_to 'Ver', admin_invoice_path(invoice), class: 'mr-10'
+          = link_to 'Editar', edit_admin_invoice_path(invoice), class: 'mr-10'
+          = link_to 'Eliminar', admin_invoice_path(invoice), data: { confirm: 'Estas seguro?' }, method: :delete
 
 br
 

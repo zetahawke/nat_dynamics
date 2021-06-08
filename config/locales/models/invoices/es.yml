@@ -1,0 +1,8 @@
+es:
+  invoices:
+    form_labels:
+      invoice: Factura
+      invoices: Facturas
+      statuses:
+        not_contabilized: No contabilizado
+        contabilized: Contabilizado
