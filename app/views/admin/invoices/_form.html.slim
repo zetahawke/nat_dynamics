@@ -7,28 +7,28 @@
           li = message
 
   .field
-    = f.label :provider_name
+    = f.label :provider_name, 'Proveedor'
     = f.text_field :provider_name
   .field
-    = f.label :rut
+    = f.label :rut, 'Rut'
     = f.text_field :rut
   .field
-    = f.label :folio
+    = f.label :folio, 'Folio'
     = f.text_field :folio
   .field
-    = f.label :amount
+    = f.label :amount, 'Monto'
     = f.number_field :amount
   .field
-    = f.label :issue_date, 'Issue date'
+    = f.label :issue_date, 'Fecha de emisión'
     = f.date_field :issue_date
   .field
-    = f.label :expire_date, 'Expire date'
+    = f.label :expire_date, 'Fecha de expiración'
     = f.date_field :expire_date
   .field
-    = f.label :validation_status
+    = f.label :validation_status, 'Estado de validación'
     = f.select :validation_status, options_for_select(Invoice.validation_statuses.keys.map { |status| [status, status] }, @invoice.validation_status || 1), {}, {}
   .field
-    = f.label :user_name
+    = f.label :user_name, 'Usuario'
     = f.text_field :user_name
 
   .actions
