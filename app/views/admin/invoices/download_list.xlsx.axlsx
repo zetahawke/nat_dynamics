@@ -1,0 +1,21 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  project_heading = style.add_style(b: true, sz: 14)
+  heading = style.add_style(b: true)
+
+  wb.add_worksheet(name: "Facturas") do |sheet|
+    # Add a title row
+    sheet.add_row ["Facturas lista blanca"], style: project_heading
+    # Add the date this was downloaded
+    sheet.add_row ["Generado el", Time.now.strftime("%b %-d, %Y")]
+    # Add a blank row
+    sheet.add_row []
+    # Create the header row
+    sheet.add_row ["Proveedor", "Rut", "Folio", "Monto", "Fecha de emisión", "Fecha de expiración", "Estado de validación", "Usuario"], style: heading
+    # Create entries for each item
+    @invoices.each do |invoice|
+      sheet.add_row [invoice.provider_name, invoice.rut, invoice.folio, number_to_currency(invoice.amount, precision: 0, unit: '$', separator: ',', delimiter: '.', format: '%u %n'), invoice.issue_date, invoice.expire_date, I18n.t("invoices.form_labels.statuses.#{invoice.validation_status}"), invoice.user_name]
+    end
+  end
+end

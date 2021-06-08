@@ -21,8 +21,16 @@ module Admin
     end
 
     def download_list
-      redirect_back fallback_location: root_path, notice: 'Se descargó la información'
-    rescue StandardError => _e
+      request.format = 'xlsx'
+      @invoices = params[:invoice_ids] ? Invoice.where(id: params[:invoice_ids]) : Invoice.all
+
+      respond_to do |format|
+        format.xlsx { render xlsx: "download_list" }
+      end
+    rescue StandardError => e
+      Rails.logger.info { "===== ERROR ======" }
+      Rails.logger.info { e.message }
+      Rails.logger.info { "===== ERROR ======" }
       redirect_back fallback_location: root_path, alert: 'No se pudo descargar la información'
     end
   

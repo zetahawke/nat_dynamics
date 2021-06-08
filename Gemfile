@@ -64,3 +64,9 @@ gem "chartkick"
 gem 'email_validator'
 gem 'rut_validation'
 gem 'phonelib'
+
+gem 'rubyzip'
+gem 'caxlsx'
+gem 'caxlsx_rails'
+gem 'acts_as_xlsx',
+  :git => "git://github.com/straydogstudio/acts_as_xlsx.git"

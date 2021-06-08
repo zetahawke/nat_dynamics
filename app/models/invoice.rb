@@ -1,4 +1,6 @@
 class Invoice < ApplicationRecord
+  # acts_as_xlsx
+
   enum validation_status: { contabilized: 0, not_contabilized: 1 }
 
   class << self
