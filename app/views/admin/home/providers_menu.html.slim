@@ -1,0 +1,75 @@
+div#sidenav-left.sidenav.sidenav-left.sidebar.second-sidebar
+  ul.collapsible.pl-10 style="padding-left: 10px !important;"
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Proveedores
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Pedidos de compra
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        .collapsible-header
+          i.material-icons style='margin-right: 45px; color: rgba(0, 0, 0, 0.54); width: 10px;' chevron_right
+          | Facturas
+        .collapsible-body
+          .collection
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura de proveedores pendientes
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura de proveedores pendientes asignadas a mí
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Diario de facturas
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | facturas de proveedores abiertas
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura de proveedores que vencen hoy
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura de proveedores vencidas
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura de proveedores asignadas a las colas a las que pertenece el usuario
+            = link_to '#', class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Aprobación de facturas
+            = link_to admin_invoices_path, class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura contado
+            = link_to white_list_admin_invoices_path, class: "collection-item", data: { turbolinks: 'false' } do
+              div
+                | Factura de proveedor lista blanca
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | pagos
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Consultas e informes
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Tareas periódicas
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Configurar
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Configuración de conciliación de facturas
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Configuración de pagos
+    li
+      = link_to '#', data: { turbolinks: 'false' } do
+        i.material-icons chevron_right
+        | Versión Chile

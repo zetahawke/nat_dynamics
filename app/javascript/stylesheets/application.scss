@@ -45,6 +45,19 @@ hr {
   min-height: 812px;
   max-height: 720px;
   margin-bottom: -20px;
+
+  li {
+    a {
+      height: inherit !important;
+    }
+  }
+  .collapsible-header {
+    padding: 0 !important;
+  }
+}
+
+.collection a.collection-item {
+  color: blue;
 }
 
 .allow-overflow {
